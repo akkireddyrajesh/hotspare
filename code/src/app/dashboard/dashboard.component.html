@@ -1,0 +1,88 @@
+
+        <header class="main-header">
+
+            <nav class="navbar nav">
+
+                <a href="#" class="sidebar-toggle menu-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+
+            </nav>
+            <div class="homenav">
+                <ul class="list-group list-inline">
+                    <li class="list-group bd-r">Home</li>
+                    <li class="list-group bd-r">Help</li>
+                    <li class="list-group bd-r">Pavan Resturent and bar</li>
+                    <li class="list-group">Log out</li>
+                </ul> 
+            </div>
+        </header>
+
+        <aside class="main-sidebar">
+                <section class="sidebar">
+                        <ul class="sidebar-menu" data-widget="tree">
+                                <li class="treeview">
+                                  <a [routerLink]="['./indentManagement']" class="text-center">
+                                    <label class="menu-item-title">
+                                      Indent Managment
+                                    </label>
+                                  </a>
+                                </li>
+                                
+                                <li class="treeview">
+                                    <a [routerLink]="['./stock']" class="text-center">
+                                    <label class="menu-item-title">
+                                      Stock
+                                    </label>
+                                  </a>
+                                  </li>
+                      
+                                <li class="treeview">
+                                  <a [routerLink]="['./licenseProfile']" class="text-center">
+                                    <label class="menu-item-title">
+                                      License Profiles
+                                    </label>
+                                    
+                                  </a>
+                                </li>
+                                <li class="treeview">
+                                        <a [routerLink]="['./price']" class="text-center">
+                                          <label class="menu-item-title">
+                                            Price List
+                                          </label>
+                                          
+                                        </a>
+                                      </li>
+                                <li class="treeview">
+                                    <a [routerLink]="['./alert']" class="text-center">
+                                    <label class="menu-item-title">
+                                      Alerts
+                                    </label>
+                                  </a>
+                                  </li>
+                                  <li class="treeview">
+                                  <a [routerLink]="['./feedBack']" class="text-center">
+                                  <label class="menu-item-title">
+                                    Feedback
+                                  </label>
+                                </a>
+                                </li>
+                                <li class="treeview">
+                                    <a href="#" class="text-center">
+                                    <label class="menu-item-title">
+                                      Logout
+                                    </label>
+                                  </a>
+                                  </li>
+                              </ul>
+          
+                  <!--<a href="#" class="sidebar-toggle toggle-button" data-toggle="push-menu" role="button">
+                  <i class="fa fa-chevron-circle-right fa-lg"></i>
+              </a> -->
+          
+                </section>
+              </aside>
+        <div class="content-wrapper">
+
+              <router-outlet></router-outlet>
+              </div>
