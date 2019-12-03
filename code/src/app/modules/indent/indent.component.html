@@ -1,0 +1,83 @@
+<div class="example-button-row row">
+    <div class="col-md-12">
+    <button class="pull-right" mat-raised-button color="primary" (click)="openPopup()">Add</button>
+</div>
+</div>
+<custom-grid [rowData]="rowData" [columnDefs]="columnDefs">
+</custom-grid>
+
+<app-dialogue-popup [(visible)]="showPopup" (visibleChange)="popupClose()">
+    <form [formGroup]="indentForm">
+        <div class="row col-md-12">
+            <div class="form-group col-md-6">
+                <label class="sr-only">Retailer Code:</label>
+                <input type="text" class="form-control" placeholder="Enter Retailer Code" formControlName="retailerCode">
+            </div>
+            <div class="form-group col-md-6">
+                <label class="sr-only">authorisedPerson:</label>
+                <input type="text" class="form-control" placeholder="Enter authorisedPerson" formControlName="authorisedPerson">
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="form-group col-md-6">
+                <label class="sr-only">depot:</label>
+                <input type="text" class="form-control" placeholder="Enter depot" formControlName="depot">
+            </div>
+            <div class="form-group col-md-6">
+                <label class="sr-only">depotName:</label>
+                <input type="text" class="form-control" placeholder="Enter depotName" formControlName="depotName">
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="form-group col-md-6">
+                <label class="sr-only">indentCreationDate:</label>
+                <input type="date" class="form-control" placeholder="Enter indentCreationDate" formControlName="indentCreationDate">
+            </div>
+            <div class="form-group col-md-6">
+                <label class="sr-only">contactNumber:</label>
+                <input type="text" class="form-control" placeholder="Enter contactNumber" formControlName="contactNumber">
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="form-group col-md-6">
+                <label class="sr-only">vehicleNumber:</label>
+                <input type="text" class="form-control" placeholder="Enter vehicleNumber" formControlName="vehicleNumber">
+            </div>
+            <div class="form-group col-md-6">
+                <label class="sr-only">description:</label>
+                <input type="text" class="form-control" placeholder="Enter description" formControlName="description">
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="form-group col-md-6">
+                <label class="sr-only">productCode:</label>
+                <input type="text" class="form-control" placeholder="Enter productCode" formControlName="productCode">
+            </div>
+            <div class="form-group col-md-6">
+                <label class="sr-only">productDescription:</label>
+                <input type="text" class="form-control" placeholder="Enter productDescription" formControlName="productDescription">
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="form-group col-md-6">
+                <label class="sr-only">barCode:</label>
+                <input type="text" class="form-control" placeholder="Enter barCode" formControlName="barCode">
+            </div>
+            <div class="form-group col-md-6">
+                <label class="sr-only">noOfUnits:</label>
+                <input type="text" class="form-control" placeholder="Enter noOfUnits" formControlName="noOfUnits">
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="form-group col-md-6">
+                <label class="sr-only">unitPrice:</label>
+                <input type="text" class="form-control" placeholder="Enter unitPrice" formControlName="unitPrice">
+            </div>
+            <div class="form-group col-md-6">
+                <label class="sr-only">totalPrice:</label>
+                <input type="text" class="form-control" placeholder="Enter totalPrice" formControlName="totalPrice">
+            </div>
+        </div>
+        <button class="primary" (click)="submitIndent()">Save</button>
+    </form>
+</app-dialogue-popup>

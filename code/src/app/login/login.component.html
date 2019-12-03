@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <h2>Distillery</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <h4><strong>Good Afternoon,</strong> Welcome back!</h4>
+                <h6>Feel free to login any time</h6>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="suply-login">
+    <div class="container">
+        <div class="select-language">
+            <select class="form-control">
+            <option>English</option>
+            <option>Telugu</option>
+            <option>Hindi</option>
+        </select>
+        </div>
+    </div>
+<form [formGroup]="loginForm">
+    <div class="login-form" >
+        <div class="form-group">
+            <label>User Id</label>
+            <input type="text" class="form-control" formControlName="userId">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password">
+        </div>
+        <div class="form-group">
+            <input type="checkbox"> <label>Remember Me</label>
+        </div>
+    </div>
+    
+</form>
+<div class="col-md-offset-5 col-md-4">
+    <label class="col-md-3">
+    <button class="btn btn-success" [disabled]="!loginForm.valid" (click)="login()">
+        Login
+    </button>
+</label>
+    <!-- <a href="/features" class="btn btn-success"> OK </a> -->
+    <label class="col-md-6">
+
+    <button class="btn btn-danger"  class="btn btn-success">
+        Cancel
+    </button>
+</label>
+
+</div>
+</section>
+
+
+<div class="footer">
+    <a href="#">Return to Website</a>
+</div>

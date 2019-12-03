@@ -1,0 +1,21 @@
+.mat-container {
+    height: 85%;
+    margin-top: 5px;
+  }
+  .mat-leftbar {
+    background-color: #008080;
+    color: #ffffff;
+    }
+  .mat-menuitem
+  {
+    color: white;
+    font-weight: 500;
+  }
+  .mat-commonbar
+  {
+    background-color: #2F4F4F;
+  }
+  .mat-commonbaricon
+  {
+    color: white;
+  }

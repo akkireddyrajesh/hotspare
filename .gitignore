@@ -274,3 +274,7 @@ web.config
 .vs/v14/.suo
 .vs/v14/.suo
 .vs/v14/.suo
+
+# Custom
+/code/node_modules/
+/code/package-lock.json
