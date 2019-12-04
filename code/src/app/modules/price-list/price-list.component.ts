@@ -12,23 +12,28 @@ export class PriceListComponent implements OnInit {
 
   constructor(private _formBuilder: FormBuilder,private _indentService:IndentService) { }
   columnDefs = [
-    { headerName: 'indent Detail Id', field: 'indentDetailId' },
-    { headerName: 'indentId', field: 'indentId' },
-    // { headerName: 'productCode', field: 'productCode' },
-    // { headerName: 'barCode', field: 'barCode' },
-    // { headerName: 'productDescription', field: 'productDescription' },
-    // { headerName: 'noOfUnits', field: 'noOfUnits' },
-    // { headerName: 'unitPrice', field: 'unitPrice' },
-    // { headerName: 'total_price', field: 'total_price' },
-    // { headerName: 'creationDate', field: 'creationDate' },
-    // { headerName: 'createdBy', field: 'createdBy' },
-    // { headerName: 'updatedDate', field: 'updatedDate' },
-    // { headerName: 'updatedBy', field: 'updatedBy' },
+    { headerName: 'S.NO', field: 'sno' },
+    { headerName: 'Brand Number', field: 'brandnumber' },
+    { headerName: 'Size Code', field: 'sizeCode' },
+    { headerName: 'Pack Type', field: 'packtype' },
+    { headerName: 'Product Name', field: 'productname' },
+    { headerName: 'Issue Price', field: 'issueprice' },
+    { headerName: 'Special Margin', field: 'specialmargin' },
+    { headerName: 'MRP', field: 'mrp' },
+    { headerName: 'Type', field: 'type' }
+    
   ];
   rowData = [
     {
-      "indentDetailId":"dfgh",
-      "indentId":"dfgh"
+      "sno":"1",
+      "brandnumber":"1234",
+      "sizecode":"2345",
+      "packtype":"small",
+      "productname":"wine",
+      "issueprice":"2000",
+      "specialmargin":"1000",
+      "mrp":"2000",
+      "type":"wine"
     }
   ];
 

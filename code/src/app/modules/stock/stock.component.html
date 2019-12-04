@@ -1,1 +1,20 @@
-<p>stock works!</p>
+<!-- <div class="example-button-row row">
+    <div class="col-md-12">
+    <button class="pull-right" mat-raised-button color="primary" (click)="openPopup()">Add</button>
+</div>
+</div> -->
+<div class="container">
+    
+    <div class="col-md-3 select-language">
+        <select class="form-control">
+        <option>IML STOCK</option>
+        <option>BEER STOCK</option>
+        <option>SALE PERCENTAGE</option>
+    </select>
+    </div>
+    <div class="col-md-9"></div>
+</div>
+<custom-grid [rowData]="rowData" [columnDefs]="columnDefs">
+</custom-grid>
+
+

@@ -5,7 +5,7 @@
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
-  <mat-sidenav-container class="mat-container">
+  <mat-sidenav-container class="mat-container mat-drawer-content">
     <mat-sidenav #drawer mode="side" opened role="navigation" class="mat-leftbar">
       <mat-nav-list>
         <a mat-list-item class="mat-menuitem" routerLink='module/indent'>Indent Management</a>
@@ -14,6 +14,7 @@
         <a mat-list-item class="mat-menuitem" routerLink='module/license'>License Profiles</a>
         <a mat-list-item class="mat-menuitem" routerLink='module/alerts'>Alerts</a>
         <a mat-list-item class="mat-menuitem" routerLink='module/feedback'>Feedback</a>
+        <a mat-list-item class="mat-menuitem" routerLink='module/logout'>Logout</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

@@ -1,5 +1,5 @@
 .mat-container {
-    height: 85%;
+    height: 88.8%;
     margin-top: 5px;
   }
   .mat-leftbar {
@@ -19,3 +19,8 @@
   {
     color: white;
   }
+  .mat-drawer-content {
+   
+    
+    overflow: hidden;
+}

@@ -7,8 +7,8 @@
 </custom-grid>
 
 <app-dialogue-popup [(visible)]="showPopup" (visibleChange)="popupClose()">
-    <form [formGroup]="indentForm">
-        <div class="row col-md-12">
+    <form class="row" [formGroup]="indentForm">
+        <div class="col-md-12">
             <div class="form-group col-md-6">
                 <label class="sr-only">Retailer Code:</label>
                 <input type="text" class="form-control" placeholder="Enter Retailer Code" formControlName="retailerCode">

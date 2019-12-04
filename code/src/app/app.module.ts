@@ -25,6 +25,8 @@ import { HttpInterceptorService } from './services/httpinterceptor.service';
 import { HTTP_INTERCEPTORS,HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {DialoguePopupComponent} from './custom/dialogue-popup/dialogue-popup.component';
+import { LogoutComponent } from './modules/logout/logout.component';
+
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -44,7 +46,8 @@ const appRoutes: Routes = [
     { path: 'module/price', component: PriceListComponent },
     { path: 'module/license', component: LicenseProfilesComponent },
     { path: 'module/alerts', component: AlertsComponent },
-    { path: 'module/feedback', component: FeedbackComponent }
+    { path: 'module/feedback', component: FeedbackComponent },
+    { path: 'module/logout', component: LogoutComponent }
   ]
 }
 ];
@@ -64,7 +67,9 @@ const appRoutes: Routes = [
     AlertsComponent,
     FeedbackComponent,
     FeaturesComponent,
-    DialoguePopupComponent
+    DialoguePopupComponent,
+    LogoutComponent,
+    
   ],
   imports: [
     BrowserModule,
