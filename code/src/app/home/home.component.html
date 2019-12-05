@@ -1,9 +1,18 @@
 <mat-toolbar color="warn" class="mat-commonbar">
     <mat-toolbar-row>
-      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+      <button type="button" class="togglebtn" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
         <mat-icon class="mat-commonbaricon" aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
     </mat-toolbar-row>
+    <mat-toolbar-row class="navbarrow" style="display: block;">
+        <div class="navigationbar">
+            <a class="" routerLink='/home'>Home</a>
+            <label>|</label>
+            <a class="" routerLink='module/indent'>Help</a>
+            <label>|</label>
+            <a class="" routerLink='/login'>Logout</a>
+        </div>
+      </mat-toolbar-row>
   </mat-toolbar>
   <mat-sidenav-container class="mat-container mat-drawer-content">
     <mat-sidenav #drawer mode="side" opened role="navigation" class="mat-leftbar">
@@ -14,7 +23,7 @@
         <a mat-list-item class="mat-menuitem" routerLink='module/license'>License Profiles</a>
         <a mat-list-item class="mat-menuitem" routerLink='module/alerts'>Alerts</a>
         <a mat-list-item class="mat-menuitem" routerLink='module/feedback'>Feedback</a>
-        <a mat-list-item class="mat-menuitem" routerLink='module/logout'>Logout</a>
+        <a mat-list-item class="mat-menuitem" routerLink='/logout'>Logout</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
