@@ -24,3 +24,33 @@
     
     overflow: hidden;
 }
+.navbarrow
+{
+  box-sizing: border-box;
+  padding: 0 16px;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  height: 40px;
+}
+.navigationbar
+{
+  float: right;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.navigationbar a
+{
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.mat-toolbar-row
+{
+  height: 50px;
+}
+.togglebtn
+{
+  margin-top: 70px;
+}

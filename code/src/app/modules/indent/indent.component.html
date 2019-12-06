@@ -1,7 +1,47 @@
-<div class="example-button-row row">
-    <div class="col-md-12">
+<div class="action-row row" >
+    <div class="col-md-12" style="display: none;">
     <button class="pull-right" mat-raised-button color="primary" (click)="openPopup()">Add</button>
 </div>
+
+<div class="service-box">
+    <div class="bar-img">
+        <div>
+        <img src="assets/images/indent.png">
+        <a class="" >Retailer Indent</a>
+    </div>
+    <div>
+            <img src="assets/images/indent.png">
+            <a class="" >Old Indents</a>
+        </div>
+    <div>
+            <img src="assets/images/indent.png">
+            <a class=""  (click)="openPopup()">Create Indent</a>
+        </div>
+    </div> 
+</div>
+<div class="service-box">
+        <div class="bar-img">
+            <div style="    margin-top: 9px;">
+            <img src="assets/images/thirty.png">
+            <a class="" >Last 30days Report</a>
+        </div>
+        <div style="display: flex;width: 450px;">
+                <img style="    margin-top: 9px;" src="assets/images/duration.png">
+                <a class="" >Statement</a>
+   
+                <mat-form-field class="datefield">
+                        <input matInput [matDatepicker] = "picker1" placeholder = "From Date">
+                        <mat-datepicker-toggle matSuffix [for] = "picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                     </mat-form-field>
+                     <mat-form-field class="datefield">
+                            <input matInput [matDatepicker] = "picker2" placeholder = "To Date">
+                            <mat-datepicker-toggle matSuffix [for] = "picker2"></mat-datepicker-toggle>
+                            <mat-datepicker #picker2></mat-datepicker>
+                         </mat-form-field>
+            </div>
+        </div> 
+    </div>
 </div>
 <custom-grid [rowData]="rowData" [columnDefs]="columnDefs">
 </custom-grid>

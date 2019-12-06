@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from "@angular/router";
 import { AgGridModule } from 'ag-grid-angular';
+import {MatDatepickerModule, MatInputModule,MatNativeDateModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -82,6 +83,7 @@ const appRoutes: Routes = [
     NoopAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatDatepickerModule, MatInputModule,MatNativeDateModule,
     FormsModule
   ],
   providers: [AppConfigService,HttpService,{
