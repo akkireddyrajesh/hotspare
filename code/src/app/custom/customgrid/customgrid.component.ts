@@ -10,9 +10,12 @@ export class CustomgridComponent implements OnInit {
   @Input() rowData: [];
   @Input() columnDefs: [];
 
+  quickSearchValue: string = '';
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
