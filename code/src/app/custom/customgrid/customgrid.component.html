@@ -1,6 +1,13 @@
+<div class="search-container">
+       <div style="flex-grow: 1;"></div>
+   <div style="float: right;margin-right: 10px;padding-bottom: 10px;"><label class="searchlabel">Search: </label>
+<input  [(ngModel)]="quickSearchValue" style="margin-left: 5px;" type="text" id="filter-text-box" placeholder="Type to filter..." />
+</div>
+</div>
 <ag-grid-angular 
     style=" height: 1000px;" 
     class="ag-theme-balham custom-grid"
     [rowData]="rowData" 
-    [columnDefs]="columnDefs">
+    [columnDefs]="columnDefs"
+    [quickFilterText]= quickSearchValue>
 </ag-grid-angular>
