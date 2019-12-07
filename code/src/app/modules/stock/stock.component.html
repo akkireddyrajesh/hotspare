@@ -6,10 +6,10 @@
 <div class="container">
     
     <div class="col-md-3 select-language">
-        <select class="form-control">
-        <option>IML STOCK</option>
-        <option>BEER STOCK</option>
-        <option>SALE PERCENTAGE</option>
+        <select class="form-control" (change)="serchByProductName($event.target.value)">
+        <option value="IML STOCK">IML STOCK</option>
+        <option value="BEER STOCK">BEER STOCK</option>
+        <option value="SALE PERCENTAGE">SALE PERCENTAGE</option>
     </select>
     </div>
     <div class="col-md-9"></div>

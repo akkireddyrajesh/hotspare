@@ -11,7 +11,7 @@
     </div>
     <div>
             <img src="assets/images/indent.png">
-            <a class="" >Old Indents</a>
+            <a class="" (click)="getOldIndents()" >Old Indents</a>
         </div>
     <div>
             <img src="assets/images/indent.png">
@@ -23,19 +23,19 @@
         <div class="bar-img">
             <div style="    margin-top: 9px;">
             <img src="assets/images/thirty.png">
-            <a class="" >Last 30days Report</a>
+            <a class="" (click)="getThirtyDays()">Last 30days Report</a>
         </div>
         <div style="display: flex;width: 450px;">
                 <img style="    margin-top: 9px;" src="assets/images/duration.png">
                 <a class="" >Statement</a>
    
                 <mat-form-field class="datefield">
-                        <input matInput [matDatepicker] = "picker1" placeholder = "From Date">
+                        <input matInput [matDatepicker] = "picker1" placeholder = "From Date" (dateInput)="startDateChange($event)">
                         <mat-datepicker-toggle matSuffix [for] = "picker1"></mat-datepicker-toggle>
                         <mat-datepicker #picker1></mat-datepicker>
                      </mat-form-field>
                      <mat-form-field class="datefield">
-                            <input matInput [matDatepicker] = "picker2" placeholder = "To Date">
+                            <input matInput [matDatepicker] = "picker2" placeholder = "To Date" (dateInput)="endDateChange($event)">
                             <mat-datepicker-toggle matSuffix [for] = "picker2"></mat-datepicker-toggle>
                             <mat-datepicker #picker2></mat-datepicker>
                          </mat-form-field>

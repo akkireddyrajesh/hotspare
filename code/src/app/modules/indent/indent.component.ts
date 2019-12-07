@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { IndentService } from 'src/app/services/apiServices/indent.service';
+import * as moment from 'moment';
+
 
 
 @Component({
@@ -28,21 +30,20 @@ export class IndentComponent implements OnInit {
     indentCreationDate:['']
 
   });
+  startDate: string;
+  endDate: string;
   constructor(private _formBuilder: FormBuilder,private _indentService:IndentService) { }
 
   columnDefs = [
-    { headerName: 'indent Detail Id', field: 'indentDetailId' },
-    { headerName: 'indentId', field: 'indentId' },
-    { headerName: 'productCode', field: 'productCode' },
-    { headerName: 'barCode', field: 'barCode' },
-    { headerName: 'productDescription', field: 'productDescription' },
-    { headerName: 'noOfUnits', field: 'noOfUnits' },
-    { headerName: 'unitPrice', field: 'unitPrice' },
-    { headerName: 'total_price', field: 'total_price' },
+    { headerName: 'depotId', field: 'depotId' },
+    { headerName: 'shopName', field: 'shopName' },
+    { headerName: 'depotName', field: 'depotName' },
+    { headerName: 'indentCreationDate', field: 'indentCreationDate' },
+    { headerName: 'location', field: 'location' },
+    { headerName: 'district', field: 'district' },
+    { headerName: 'authorisedPerson', field: 'authorisedPerson' },
     { headerName: 'creationDate', field: 'creationDate' },
-    { headerName: 'createdBy', field: 'createdBy' },
-    { headerName: 'updatedDate', field: 'updatedDate' },
-    { headerName: 'updatedBy', field: 'updatedBy' },
+    { headerName: 'createdBy', field: 'createdBy' }
   ];
 
   rowData = [];
@@ -51,7 +52,8 @@ export class IndentComponent implements OnInit {
     // fetch('https://fakerestapi.azurewebsites.net/api/Books')
     //   .then(result => result.json())
     //   .then(rowData => this.rowData = rowData);
-      this.getAllIndentData();
+      // this.getAllIndentData();
+      this.getThirtyDays();
     //console.log("st", this.rowData)
   }
 
@@ -74,12 +76,50 @@ this.rowData = data['response Date List'];
     console.log(this.indentForm.value);
     this._indentService.createIndent(this.indentForm.value).subscribe(data=>{
       console.log(data);
-      
-    })
+    });
     this.indentForm.reset();
     this.popupClose();
-    
   }
+  getThirtyDays() {
+    this.rowData = [];
+    this._indentService.getLastThirtyDays().subscribe(data=>{
+      console.log(data);
+      this.rowData = data['responseData'];
+  });
+}
+getOldIndents() {
+  this.rowData = [];
+  this._indentService.getOldIndents().subscribe(data=>{
+    console.log(data);
+    this.rowData = data['responseData'];
+});
+}
+
+startDateChange(event) {
+  console.log( moment(event.value).format('YYYY-MM-DD'));
+  this.startDate = moment(event.value).format('YYYY-MM-DD');
+  if(this.startDate && this.endDate) {
+    const obj ={
+      'startDate':this.startDate,
+      'endDate':this.endDate
+    }
+    this._indentService.getDateWise(obj).subscribe(data=>{
+    this.rowData = data['responseData'];
+    })
+  }
+}
+endDateChange(event){
+  this.endDate = moment(event.value).format('YYYY-MM-DD');
+  if(this.startDate && this.endDate) {
+    const obj ={
+      'startDate':this.startDate,
+      'endDate':this.endDate
+    }
+    this._indentService.getDateWise(obj).subscribe(data=>{
+    this.rowData = data['responseData'];
+    })
+  }
+}
 
   openPopup() {
     this.showPopup = true;

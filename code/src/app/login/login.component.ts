@@ -31,8 +31,14 @@ export class LoginComponent implements OnInit {
    */
   login(){
     if(this.loginForm.valid){
+      const data = {
+        "requestData":{
+         "userName":this.loginForm.get('userId').value,
+         "password":this.loginForm.get('password').value
+        }
+       };
     // Uncomment after login api
-      // this.loginService.login(this.loginForm.value).subscribe(data=>{
+      // this.loginService.login(data).subscribe(data=>{
       //   if(data){
       //     this.router.navigate(['../features']);
       //   }
