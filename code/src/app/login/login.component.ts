@@ -38,14 +38,14 @@ export class LoginComponent implements OnInit {
         }
        };
     // Uncomment after login api
-      // this.loginService.login(data).subscribe(data=>{
-      //   if(data){
-      //     this.router.navigate(['../features']);
-      //   }
-      // },error=>{
-      //   console.log('error');
-      // });
-      this.router.navigate(['../features']);
+      this.loginService.login(data).subscribe(data=>{
+        if(data){
+          this.router.navigate(['../features']);
+        }
+      },error=>{
+        console.log('error');
+      });
+      // this.router.navigate(['../features']);
     }
   }
 }
